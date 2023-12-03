@@ -3,16 +3,20 @@ from math import prod
 
 
 def main() -> None:
+    if len(sys.argv) != 3:
+        print("Bad arguments!")
+        exit(1)
+
     color_indices: dict = {"red": 0, "green": 1, "blue": 2}
 
     part01_path: str = sys.argv[1]
     with open(part01_path, 'r') as game01:
         games01: list[set] = [parse_game(line.strip(), color_indices)
-                            for line in game01]
+                              for line in game01]
 
     bag: tuple[int] = (12, 13, 14)
     possible_games: list[int] = {game_is_possible(i + 1, game, bag)
-                                for i, game in enumerate(games01)}
+                                 for i, game in enumerate(games01)}
 
     print("Part 01:")
     print(f"Answer = {sum(possible_games)}")
@@ -22,7 +26,7 @@ def main() -> None:
     part02_path: str = sys.argv[2]
     with open(part02_path, 'r') as game02:
         games02: list[set] = [parse_game(line.strip(), color_indices)
-                            for line in game02]
+                              for line in game02]
 
     answer: int = sum((power_of_game_cubes(game) for game in games02))
     print("Part 02:")
