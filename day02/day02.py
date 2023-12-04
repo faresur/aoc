@@ -3,34 +3,31 @@ from math import prod
 
 
 def main() -> None:
-    if len(sys.argv) != 3:
+    if len(sys.argv) != 2:
         print("Bad arguments!")
         exit(1)
 
     color_indices: dict = {"red": 0, "green": 1, "blue": 2}
 
-    part01_path: str = sys.argv[1]
-    with open(part01_path, 'r') as game01:
-        games01: list[set] = [parse_game(line.strip(), color_indices)
-                              for line in game01]
+    input_path: str = sys.argv[1]
+    with open(input_path, 'r') as game:
+        games: list[set] = [parse_game(line.strip(), color_indices)
+                            for line in game]
 
     bag: tuple[int] = (12, 13, 14)
-    possible_games: list[int] = {game_is_possible(i + 1, game, bag)
-                                 for i, game in enumerate(games01)}
+    possible_games: set[int] = {game_is_possible(i + 1, game, bag)
+                                for i, game in enumerate(games)}
+    sum_of_ids: int = sum(possible_games)
 
     print("Part 01:")
-    print(f"Answer = {sum(possible_games)}")
+    print(f"Answer = {sum_of_ids}")
 
     print()
 
-    part02_path: str = sys.argv[2]
-    with open(part02_path, 'r') as game02:
-        games02: list[set] = [parse_game(line.strip(), color_indices)
-                              for line in game02]
-
-    answer: int = sum((power_of_game_cubes(game) for game in games02))
+    cube_powers: list[int] = [calc_cube_powers(game) for game in games]
+    sum_of_powers: int = sum(cube_powers)
     print("Part 02:")
-    print(f"Answer = {answer}")
+    print(f"Answer = {sum_of_powers}")
     
 
 def parse_game(game_string: str, color_ind: dict) -> set[tuple[int]]:
@@ -55,7 +52,7 @@ def game_is_possible(game_id: int, game: tuple, bag_combo: tuple) -> int:
     return game_id
 
 
-def power_of_game_cubes(game: set[tuple[int]]) -> int:
+def calc_cube_powers(game: set[tuple[int]]) -> int:
     minimum_cubes: list[int] = [0, 0, 0]
     for rnd in game:
         for i in range(len(minimum_cubes)):
