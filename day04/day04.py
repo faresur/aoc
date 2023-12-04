@@ -2,6 +2,10 @@ import sys
 
 
 def main() -> None:
+    if len(sys.argv) != 2:
+        print("Bad arguments!")
+        exit(1)
+
     input_path: str = sys.argv[1]
     with open(input_path, 'r') as cards:
         points_won: int = sum((get_points(card.strip()) for card in cards))
@@ -24,25 +28,19 @@ def main() -> None:
 def get_points(card: str) -> int:
     first_nums, second_nums = card.split(": ")[1].split(" | ")
     
-    winning_nums: set[int] = {int(i) for i in first_nums.split(' ')
-                              if i.isnumeric()}
-    owned_nums: set[int] = {int(i) for i in second_nums.split(' ')
-                            if i.isnumeric()}
+    winning_nums: set[int] = {int(i) for i in first_nums.split()}
+    owned_nums: set[int] = {int(i) for i in second_nums.split()}
     
     common_nums: set[int] = winning_nums & owned_nums
-    if len(common_nums):
-        return 2 ** (len(common_nums) - 1)
-    return 0
+    return int(2 ** (len(common_nums) - 1))
 
 
 def process_cards(cards: list[str]) -> list[int]:
     amount_of_each: list[int] = [1 for _ in range(len(cards))]
     for i, card in enumerate(cards):
         first_nums, second_nums = card.split(": ")[1].split(" | ")
-        winning_nums: set[int] = {int(i) for i in first_nums.split(' ')
-                                  if i.isnumeric()}
-        owned_nums: set[int] = {int(i) for i in second_nums.split(' ')
-                                if i.isnumeric()}
+        winning_nums: set[int] = {int(i) for i in first_nums.split()}
+        owned_nums: set[int] = {int(i) for i in second_nums.split()}
         common_nums: set[int] = winning_nums & owned_nums
         for j in range(i + 1, i + len(common_nums) + 1):
             amount_of_each[j] += amount_of_each[i]
