@@ -57,11 +57,18 @@ def get_locations(seeds: list[int],
 def get_ranged_locations(seed_ranges: list[tuple[int]],
                          maps: list[set[tuple[int]]]) -> list[int]:
     locations_ranges: list[tuple[int]] = []
-    for seeds in seed_ranges:
-        mapped_values: list[tuple[int]] = [seeds]
+    for seedrng in seed_ranges:
+        unmapped_vals: list[tuple[int]] = [seedrng]
+        mapped_vals: list[tuple[int]] = []
         for mapping in maps:
             for dest, src, rng in mapping:
                 pass
+
+
+def map_range(input_range: tuple[int],
+              from_range: tuple[int],
+              to_range: tuple[int]):
+    pass
 
 
 if __name__ == "__main__":
