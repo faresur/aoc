@@ -1,3 +1,4 @@
+from collections.abc import Generator
 import sys
 import re
 
@@ -16,19 +17,19 @@ def main() -> None:
                       "seven": '7', "eight": '8', "nine": '9'}
 
 
-    calibration_values: list[int] = (get_value(line) for line in lines)
+    calibration_values: Generator[int, None, None] = (get_value(line) for line in lines)
     total_value: int = sum(calibration_values)
     
-    print("Part 1:")
+    print("Part 01:")
     print(f"Answer = {total_value}")
 
     print()
 
-    spelled_values: list[int] = (get_spelled_value(line, mappings)
-                                 for line in lines)
+    spelled_values: Generator[int, None, None] = (get_spelled_value(line, mappings)
+                                                  for line in lines)
     total_spelled_value: int = sum(spelled_values)
 
-    print("Part 2:")
+    print("Part 02:")
     print(f"Answer = {total_spelled_value}")
     
 
@@ -37,7 +38,7 @@ def get_value(line: str) -> int:
     digits: str = ''.join(re.findall(regex, line))
     return int(digits[0] + digits[-1])
 
-def get_spelled_value(line: str, mappings: dict) -> str:
+def get_spelled_value(line: str, mappings: dict) -> int:
     regex: str = r"(?=(\d|one|two|three|four|five|six|seven|eight|nine))"
     digits: str = ''.join(mappings[digit] if digit in mappings else digit
                           for digit in re.findall(regex, line))
