@@ -2,9 +2,9 @@
 
 namespace day01;
 
-public static class Program
+internal static class Program
 {
-    private static Dictionary<string, string> Mappings { set; get; } = 
+    private static readonly Dictionary<string, string> Mappings = 
         new Dictionary<string, string>() {
             {"one", "1"}, {"two", "2"}, {"three", "3"},
             {"four", "4"}, {"five", "5"}, {"six", "6"},
