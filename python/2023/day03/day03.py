@@ -14,9 +14,9 @@ def main() -> None:
     part_numbers: list[int] = []
     possible_gears: dict = {}
 
-    adjacent_offsets: set[tuple(int)] = {(-1, -1), (-1, 0), (-1, 1),
-                                         (0, -1),           (0, 1),
-                                         (1, -1),  (1, 0),  (1, 1)}
+    adjacent_offsets: list[tuple[int, int]] = [(-1, -1), (-1, 0), (-1, 1),
+                                               (0, -1),           (0, 1),
+                                               (1, -1),  (1, 0),  (1, 1)]
     current_num: str = ""
     is_part: bool = False
     adjacent_gears: set[str] = set()

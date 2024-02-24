@@ -5,7 +5,7 @@ internal static class Program
     private static readonly Dictionary<string, int> ColorInd =
         new Dictionary<string, int>
         {
-            { "red", 0 }, { "green", 1 }, {"blue", 2}
+            { "red", 0 }, { "green", 1 }, { "blue", 2 }
         };
     
     public static void Main(string[] args)
@@ -90,6 +90,6 @@ internal static class Program
                 }
             }
         }
-        return minCubes[0] * minCubes[1] * minCubes[2];
+        return minCubes.Aggregate((x, y) => x * y);
     }
 }
