@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "K3c9W4pmcROwDBsfUHUAoqPrOuf+5xfMR/fDS7r9xn9Z3q0vDSaJuPyH3a+w2DObwJc666tMEi9EU+KOW622lg==",
+  "success": true,
+  "projectFilePath": "/home/fares/compsci/competitive/aoc/solutions/c-sharp/2023/day04/day04.csproj",
+  "expectedPackageFiles": [
+    "/home/fares/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.1/microsoft.aspnetcore.app.ref.8.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

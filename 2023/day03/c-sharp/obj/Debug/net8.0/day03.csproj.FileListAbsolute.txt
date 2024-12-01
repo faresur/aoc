@@ -1,0 +1,15 @@
+/home/fares/compsci/competitive/aoc/solutions/c-sharp/2023/day03/bin/Debug/net8.0/day03
+/home/fares/compsci/competitive/aoc/solutions/c-sharp/2023/day03/bin/Debug/net8.0/day03.deps.json
+/home/fares/compsci/competitive/aoc/solutions/c-sharp/2023/day03/bin/Debug/net8.0/day03.runtimeconfig.json
+/home/fares/compsci/competitive/aoc/solutions/c-sharp/2023/day03/bin/Debug/net8.0/day03.dll
+/home/fares/compsci/competitive/aoc/solutions/c-sharp/2023/day03/bin/Debug/net8.0/day03.pdb
+/home/fares/compsci/competitive/aoc/solutions/c-sharp/2023/day03/obj/Debug/net8.0/day03.GeneratedMSBuildEditorConfig.editorconfig
+/home/fares/compsci/competitive/aoc/solutions/c-sharp/2023/day03/obj/Debug/net8.0/day03.AssemblyInfoInputs.cache
+/home/fares/compsci/competitive/aoc/solutions/c-sharp/2023/day03/obj/Debug/net8.0/day03.AssemblyInfo.cs
+/home/fares/compsci/competitive/aoc/solutions/c-sharp/2023/day03/obj/Debug/net8.0/day03.csproj.CoreCompileInputs.cache
+/home/fares/compsci/competitive/aoc/solutions/c-sharp/2023/day03/obj/Debug/net8.0/day03.sourcelink.json
+/home/fares/compsci/competitive/aoc/solutions/c-sharp/2023/day03/obj/Debug/net8.0/day03.dll
+/home/fares/compsci/competitive/aoc/solutions/c-sharp/2023/day03/obj/Debug/net8.0/refint/day03.dll
+/home/fares/compsci/competitive/aoc/solutions/c-sharp/2023/day03/obj/Debug/net8.0/day03.pdb
+/home/fares/compsci/competitive/aoc/solutions/c-sharp/2023/day03/obj/Debug/net8.0/day03.genruntimeconfig.cache
+/home/fares/compsci/competitive/aoc/solutions/c-sharp/2023/day03/obj/Debug/net8.0/ref/day03.dll
