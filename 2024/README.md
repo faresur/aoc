@@ -5,7 +5,7 @@ Puzzle solutions for AoC 2024.
 ## Progress
 
 <details>
-<summary>Days and languages used</summary>
+<summary>Days and languages used:</summary>
 
 - [x] Day 1 (Haskell)
 - [x] Day 2 (Kotlin)
