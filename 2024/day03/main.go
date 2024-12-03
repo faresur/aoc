@@ -52,16 +52,11 @@ func getConditional(instructions []string) (conditionalResult int) {
 }
 
 func main() {
-	var inputLines []string
+	var instructions []string
+	r, _ := regexp.Compile("(mul[(][0-9]+,[0-9]+[)]|do[(][)]|don't[(][)])")
 	scanner := bufio.NewScanner(os.Stdin)
 	for scanner.Scan() {
 		line := scanner.Text()
-		inputLines = append(inputLines, line)
-	}
-
-	r, _ := regexp.Compile("(mul[(][0-9]+,[0-9]+[)]|do[(][)]|don't[(][)])")
-	var instructions []string
-	for _, line := range inputLines {
 		instructions = append(instructions, r.FindAllString(line, -1)...)
 	}
 
