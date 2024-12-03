@@ -9,7 +9,7 @@ Puzzle solutions for AoC 2024.
 
 - [x] Day 1 (Haskell)
 - [x] Day 2 (Kotlin)
-- [ ] Day 3
+- [x] Day 3 (Go)
 - [ ] Day 4
 - [ ] Day 5
 - [ ] Day 6
