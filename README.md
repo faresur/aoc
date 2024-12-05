@@ -10,7 +10,7 @@ My solutions to Advent of Code puzzles.
 |  2  | Kotlin    |
 |  3  | Go        |
 |  4  | Kotlin    |
-|  5  |     -     |
+|  5  | C#        |
 |  6  |     -     |
 |  7  |     -     |
 |  8  |     -     |
