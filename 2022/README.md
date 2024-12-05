@@ -4,33 +4,30 @@ Puzzle solutions for AoC 2022.
 
 ## Progress
 
-<details>
-<summary>Days and languages used:</summary>
-
-- [x] Day 1 (Python)
-- [x] Day 2 (Python)
-- [x] Day 3 (Python)
-- [x] Day 4 (Python)
-- [x] Day 5 (Python)
-- [x] Day 6 (Python)
-- [x] Day 7 (Python)
-- [x] Day 8 (Python)
-- [x] Day 9 (Python)
-- [x] Day 10 (Python)
-- [x] Day 11 (Python)
-- [x] Day 12 (Python)
-- [x] Day 13 (Python)
-- [ ] Day 14
-- [ ] Day 15
-- [ ] Day 16
-- [ ] Day 17
-- [ ] Day 18
-- [ ] Day 19
-- [ ] Day 20
-- [ ] Day 21
-- [ ] Day 22
-- [ ] Day 23
-- [ ] Day 24
-- [ ] Day 25
-
-</details>
+| Day | Languages |
+| --- | --------- |
+|  1  | Python    |
+|  2  | Python    |
+|  3  | Python    |
+|  4  | Python    |
+|  5  | Python    |
+|  6  | Python    |
+|  7  | Python    |
+|  8  | Python    |
+|  9  | Python    |
+|  10 | Python    |
+|  11 | Python    |
+|  12 | Python    |
+|  13 | Python    |
+|  14 |     -     |
+|  15 |     -     |
+|  16 |     -     |
+|  17 |     -     |
+|  18 |     -     |
+|  19 |     -     |
+|  20 |     -     |
+|  21 |     -     |
+|  22 |     -     |
+|  23 |     -     |
+|  24 |     -     |
+|  25 |     -     |

@@ -1,55 +1,57 @@
 ﻿List<string> inputLines = [];
-var input = Console.ReadLine();
-while (input is not null)
-{
+while (Console.ReadLine() is { } input)
     inputLines.Add(input);
-    input = Console.ReadLine();
-}
 
 var splitIndex = inputLines.FindIndex(a => a == "");
+var rules = inputLines[..splitIndex];
+var updates = inputLines.Skip(splitIndex+1).ToList();
 
-var order = inputLines[..splitIndex]
-    .Select(rule => rule.Split("|").Select(int.Parse).ToList())
-    .GroupBy(rule => rule[0])
-    .ToDictionary(
-        group => group.Key,
-        group => group.ToList().Select(rule => rule[1]).ToHashSet());
+var updateComparer = new UpdateComparer(rules);
 
-var updateSum = inputLines.Skip(splitIndex + 1)
+var updateSum = updates
     .Select(update => update.Split(",").Select(int.Parse).ToList())
     .Where(update =>
-    {
-        var sorted = new List<int>(update);
-        sorted.Sort(Compare);
-        return Enumerable.SequenceEqual(sorted, update);
-    })
-    .Select(update => update[update.Count / 2])
-    .Sum();
+        new List<int>(update)
+            .OrderBy(x => x, updateComparer)
+            .SequenceEqual(update))
+    .Sum(update => update[update.Count / 2]);
+
+var incorrectUpdateSum = updates
+    .Select(update =>
+        (update.Split(",")
+                .Select(int.Parse)
+                .ToList(),
+            update.Split(",")
+                .Select(int.Parse)
+                .OrderBy(x => x, updateComparer)
+                .ToList()))
+    .Where(updateWithExpected =>
+        !updateWithExpected.Item1.SequenceEqual(updateWithExpected.Item2))
+    .Sum(updateWithExpected =>
+        updateWithExpected.Item2[updateWithExpected.Item2.Count / 2]);
 
 Console.WriteLine($"Part 1 Answer: {updateSum}");
-
-var incorrectUpdateSum = inputLines.Skip(splitIndex + 1)
-    .Select(update =>
-    {
-        var unSorted = update.Split(",").Select(int.Parse).ToList();
-        var sorted = new List<int>(unSorted);
-        sorted.Sort(Compare);
-        return (!Enumerable.SequenceEqual(sorted, unSorted))
-            ? sorted[sorted.Count / 2]
-            : 0;
-    })
-    .Sum();
-
 Console.WriteLine($"Part 2 Answer: {incorrectUpdateSum}");
 
-int Compare(int a, int b)
+internal class UpdateComparer : IComparer<int>
 {
-    order.TryGetValue(a, out var greaterThanA);
-    if (greaterThanA is not null && greaterThanA.Contains(b))
-        return -1;
+    private readonly Dictionary<int, HashSet<int>> _order;
+
+    public UpdateComparer(IEnumerable<string> rules) => _order = rules
+        .Select(rule => rule.Split("|").Select(int.Parse).ToList())
+        .GroupBy(rule => rule[0])
+        .ToDictionary(
+            group => group.Key,
+            group => group.Select(rule => rule[1]).ToHashSet());
     
-    order.TryGetValue(b, out var greaterThanB);
-    if (greaterThanB is not null && greaterThanB.Contains(a))
-        return 1;
-    return 0;
+    public int Compare(int x, int y)
+    {
+        if (_order.TryGetValue(x, out var greaterThanA) &&
+            (greaterThanA?.Contains(y) ?? false))
+            return -1;
+        if (_order.TryGetValue(y, out var greaterThanB) &&
+            (greaterThanB?.Contains(x) ?? false))
+            return 1;
+        return 0;
+    }
 }

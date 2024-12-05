@@ -4,33 +4,30 @@ Puzzle solutions for AoC 2023.
 
 ## Progress
 
-<details>
-<summary>Days and languages used:</summary>
-
-- [x] Day 1 (Python, C#)
-- [x] Day 2 (Python, C#)
-- [x] Day 3 (Python, C#)
-- [x] Day 4 (Python, C#)
-- [x] Day 5 (Python)
-- [x] Day 6 (Python, C#)
-- [x] Day 7 (Python)
-- [x] Day 8 (Python)
-- [ ] Day 9
-- [ ] Day 10
-- [ ] Day 11
-- [ ] Day 12
-- [ ] Day 13
-- [ ] Day 14
-- [ ] Day 15
-- [ ] Day 16
-- [ ] Day 17
-- [ ] Day 18
-- [ ] Day 19
-- [ ] Day 20
-- [ ] Day 21
-- [ ] Day 22
-- [ ] Day 23
-- [ ] Day 24
-- [ ] Day 25
-
-</details>
+| Day | Languages     |
+| --- | ------------- |
+|  1  | Python, C#    |
+|  2  | Python, C#    |
+|  3  | Python, C#    |
+|  4  | Python, C#    |
+|  5  | Python        |
+|  6  | Python, C#    |
+|  7  | Python        |
+|  8  | Python        |
+|  9  |     -         |
+|  10 |     -         |
+|  11 |     -         |
+|  12 |     -         |
+|  13 |     -         |
+|  14 |     -         |
+|  15 |     -         |
+|  16 |     -         |
+|  17 |     -         |
+|  18 |     -         |
+|  19 |     -         |
+|  20 |     -         |
+|  21 |     -         |
+|  22 |     -     |
+|  23 |     -     |
+|  24 |     -     |
+|  25 |     -     |
