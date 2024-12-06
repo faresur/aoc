@@ -11,7 +11,7 @@ My solutions to Advent of Code puzzles.
 |  3  | Go        |
 |  4  | Kotlin    |
 |  5  | C#        |
-|  6  |     -     |
+|  6  | Kotlin    |
 |  7  |     -     |
 |  8  |     -     |
 |  9  |     -     |
