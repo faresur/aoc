@@ -13,7 +13,7 @@ Puzzle solutions for AoC 2024.
 |  5  | C#        |
 |  6  | Kotlin    |
 |  7  | Kotlin    |
-|  8  |     -     |
+|  8  | Kotlin    |
 |  9  |     -     |
 |  10 |     -     |
 |  11 |     -     |
