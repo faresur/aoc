@@ -20,7 +20,7 @@ My solutions to Advent of Code puzzles.
 |  12 | Kotlin    |
 |  13 |     -     |
 |  14 | Kotlin    |
-|  15 |     -     |
+|  15 | Kotlin    |
 |  16 |     -     |
 |  17 |     -     |
 |  18 |     -     |
